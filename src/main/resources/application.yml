@@ -1,3 +1,6 @@
 micronaut:
     application:
         name: iam-server
+    server:
+        cors:
+            enabled: true
