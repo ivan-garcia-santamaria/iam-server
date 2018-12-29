@@ -1,10 +1,12 @@
 package com.masmovil.iam.controller;
 
+import com.masmovil.iam.model.Brand;
 import com.masmovil.iam.model.Group;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.*;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +16,20 @@ import java.util.UUID;
 @Slf4j
 public class GroupsController {
 
-    private HashMap<String,Group> grupos=new HashMap<>();
+    private static HashMap<String,Group> grupos=new HashMap<>();
+
+    @PostConstruct
+    void initialize() {
+        this.grupos.put("MasMovil", Group.builder().id("MasMovil")
+                .name("Grupo MasMovil")
+                .description("Personal del grupo MasMovil").build());
+        this.grupos.put("Emergia", Group.builder().id("Emergia")
+                .name("Emergia")
+                .description("Personal de la empresa Emergia").build());
+        this.grupos.put("Marktel", Group.builder().id("Marktel")
+                .name("Grupo Marktel")
+                .description("Personal del Grupo Marktel").build());
+    }
 
     @Produces(MediaType.APPLICATION_JSON)
     @Get("/{id}")
