@@ -4,3 +4,8 @@ micronaut:
     server:
         cors:
             enabled: true
+users:
+    emailDomain: "@fake.masmovil.com"
+    usernameMinLength: 13
+    defaultPassword: "masmovil2019@"
+    urlToCheckUsername: "https://masmovil-test-dev.apigee.net/masmovil/iam/v1/users"
