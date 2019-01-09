@@ -14,7 +14,7 @@ public class UserResponse extends User {
     public UserResponse(UserRequest user) {
         super(user.getUserId(), user.getGivenName(),
                 user.getFamilyName(),
-                user.getSencondFamilyName());
+                user.getSecondFamilyName());
 
     }
 }

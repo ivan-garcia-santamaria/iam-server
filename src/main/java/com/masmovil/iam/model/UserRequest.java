@@ -9,7 +9,7 @@ public class UserRequest {
     private String userId;
     private String givenName;
     private String familyName;
-    private String sencondFamilyName;
+    private String secondFamilyName;
 
 
     private boolean generateSfid;

@@ -9,6 +9,6 @@ public class User {
     private String userId;
     private String givenName;
     private String familyName;
-    private String sencondFamilyName;
+    private String secondFamilyName;
 
 }
