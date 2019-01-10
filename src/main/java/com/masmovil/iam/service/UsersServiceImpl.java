@@ -82,7 +82,11 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public String getSfid(UserRequest user, String groupOfSfid) {
-        return UUID.randomUUID().toString();
+        if (user.getSfid().isEmpty()) {
+            return UUID.randomUUID().toString();
+        }else{
+            return user.getSfid();
+        }
     }
 
     @Override

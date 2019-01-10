@@ -35,9 +35,9 @@ public class UsersController {
         log.info("{}",bearer);
         usersConfig.setBearerToken(bearer);
         UserResponse userResponse=UserResponse.builder().user(userRequest).build();
-        if (userRequest.isGenerateSfid()) {
-            userResponse.setSfid(usersService.getSfid(userRequest,userRequest.getGroupOfSfid()));
-        }
+
+        userResponse.setSfid(usersService.getSfid(userRequest,userRequest.getGroupOfSfid()));
+
         userResponse.setUsername(usersService.getUsername(userRequest));
         userResponse.setEmail(usersService.getEmail(userResponse.getUsername()));
         userResponse.setPassword(usersService.getPassword());

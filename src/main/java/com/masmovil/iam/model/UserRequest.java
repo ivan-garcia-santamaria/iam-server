@@ -10,9 +10,8 @@ public class UserRequest {
     private String givenName;
     private String familyName;
     private String secondFamilyName;
+    private String sfid;
 
-
-    private boolean generateSfid;
     private String groupOfSfid;
 
 }
