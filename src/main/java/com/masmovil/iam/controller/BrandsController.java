@@ -66,7 +66,13 @@ public class BrandsController {
     @Get("/")
     public List<Brand> getAllBrands()
     {
-        log.info("lista brands {}",brands);
+        log.info("lista brands y me duermo{}",brands);
+        try {
+            Thread.sleep(15000);
+        }catch(Exception e) {
+            log.error("Error durmiendo el thread",e);
+        }
+        log.info("me despierto");
         return new ArrayList<Brand>(brands.values());
     }
 }
